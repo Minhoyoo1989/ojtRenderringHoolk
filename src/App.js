@@ -5,7 +5,10 @@ import TodoInsert from './components/TodoInsert';
 
 function App() {
   return (
-    <TodoTemplate>TODO App을 만들자!</TodoTemplate>
+    <TodoTemplate>
+      TODO App을 만들자!
+      <TodoInsert />
+    </TodoTemplate>
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />
