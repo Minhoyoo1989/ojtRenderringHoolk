@@ -2,12 +2,14 @@
 import './App.css';
 import TodoTemplate from './components/TodoTemplate';
 import TodoInsert from './components/TodoInsert';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
     <TodoTemplate>
       TODO App을 만들자!
       <TodoInsert />
+      <TodoList />
     </TodoTemplate>
     // <div className="App">
     //   <header className="App-header">
