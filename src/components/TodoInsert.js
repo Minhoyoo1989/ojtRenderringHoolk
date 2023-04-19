@@ -21,6 +21,12 @@ const TodoInsert = ({ onInsert }) => {
     [onInsert, value],
   );
 
+  //*onClick 이벤트로 onSubmit이벤트를 대체 할 수 있다.
+  // const onClick = useCallback(() => {
+  //   onInsert(value);
+  //   setValue(''); // value값 초기화
+  // }, [onInsert, value]);
+
   return (
     <form className="TodoInsert" onSubmit={onSubmit}>
       <input
