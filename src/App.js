@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 import TodoTemplate from './components/TodoTemplate';
@@ -24,10 +24,28 @@ function App() {
     },
   ]);
 
+  // 고윳값으로 사용 될 id
+  // ref를 사용하여 변수 담기
+  const nextId = useRef(4);
+
+  const onInsert = useCallback(
+    (text) => {
+      const todo = {
+        id: nextId.current,
+        text,
+        checked: false,
+      };
+
+      setTodos(todos.concat(todo));
+      nextId.current += 1; // nextId 1씩 더하기
+    },
+    [todos],
+  );
+
   return (
     <TodoTemplate>
       {/* TODO App을 만들자! */}
-      <TodoInsert />
+      <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} />
     </TodoTemplate>
     // <div className="App">
