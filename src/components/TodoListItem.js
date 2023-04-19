@@ -7,7 +7,7 @@ import cn from 'classnames';
 import './TodoListItem.scss';
 
 const TodoListItem = ({ todo, onRemove, onToggle }) => {
-  const { id, text, checked } = todo;
+  const { id, text, checked } = todo; //asd
 
   return (
     <div className="TodoListItem">
