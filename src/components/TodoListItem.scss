@@ -26,7 +26,11 @@
     // 체크 되었을 때 보여줄 스타일
     &.checked {
       svg {
-        color: #22b8cf;
+        color: #22b8cf;        
+      }
+
+      .text {
+        color: #adb5bd;
         text-decoration: line-through;
       }
     }

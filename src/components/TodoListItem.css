@@ -21,6 +21,9 @@
 }
 .TodoListItem .checkbox.checked svg {
   color: #22b8cf;
+}
+.TodoListItem .checkbox.checked .text {
+  color: #adb5bd;
   text-decoration: line-through;
 }
 .TodoListItem .remove {
