@@ -42,11 +42,18 @@ function App() {
     [todos],
   );
 
+  const onRemove = useCallback(
+    (id) => {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    },
+    [todos],
+  );
+
   return (
     <TodoTemplate>
       {/* TODO App을 만들자! */}
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onRemove={onRemove} />
     </TodoTemplate>
     // <div className="App">
     //   <header className="App-header">
